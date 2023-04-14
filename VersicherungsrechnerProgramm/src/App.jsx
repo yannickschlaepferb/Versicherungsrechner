@@ -7,6 +7,11 @@ function App() {
   const [vs, setVS] = useState("");
   const [schaden, setSchaden] = useState("");
   const [result, setResult] = useState("");
+  const [message, setMessage] = useState({
+    text: "",
+    color: "red",
+    show: false
+  })
 
   function berechnen() {
     if(vs != "" && vw != "" && schaden != "") {
@@ -19,6 +24,13 @@ function App() {
         } CHF`;
       }
     });
+    if (vs > vw) {
+      setMessage({text: "WARNUNG: Sie sind überversichert!", color: "red", show: true})
+    } else if (vs < vw) {
+      setMessage({text: "WARNUNG: Sie sind unterversichert!", color: "red", show: true})
+    } else {
+      setMessage({text: "Sie haben sich gut versichert", color: "green", show: true})
+    }
   }
   else {
     alert("Sie müssen alle Felder ausfüllen!")
@@ -26,14 +38,11 @@ function App() {
   }
 
   function reset() {
-    setVW("   ");
+    setVW("");
     setVS("");
     setSchaden("");
     setResult("");
-  }
-
-  function überOderUnterVersicherung() {
-    
+    setMessage({...message, show:false})
   }
 
   return (
@@ -85,6 +94,12 @@ function App() {
           Berechnen
         </button>
         <p>{result}</p>
+        
+        { message.show ? (
+            <p style={{color: message.color}}>
+              {message.text}
+            </p>
+        ): ""}
         <button id="reset" onClick={reset}>
           Reset
         </button>
