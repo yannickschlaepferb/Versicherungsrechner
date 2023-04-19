@@ -1,21 +1,32 @@
 .App {
   text-align: center;
+  background-image: url("/public/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+h1 {
+  margin: 0px;  
+  padding-top: 30px;
 }
 
 .App-Header {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
 }
 
 .angaben-container {
-  background-color: rgba(122, 122, 122, 0.512);
+  background-color: rgba(4, 203, 17, 0.512);
   backdrop-filter: blur(5px);
-  border-radius: 10px;
+  border-radius: 20px;
   border: 2px solid grey;
   margin: 35px;
   text-align: left;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   font-size: 20px;
   padding: 25px;
 }
@@ -26,14 +37,13 @@
 }
 
 .ergebnis {
-  background-color: rgba(122, 122, 122, 0.512);
+  background-color: rgba(4, 203, 17, 0.512);
   backdrop-filter: blur(5px);
-  border-radius: 10px;
+  border-radius: 20px;
   border: 2px solid grey;
   padding-bottom: 35px;
   margin: 100px;
   padding: 10%;
-  color: turquoise;
   text-shadow: 0.5px 0.5px 0.5px black;
 }
 
@@ -42,6 +52,17 @@
   border-radius: 5px;
   max-width: 150px;
   max-height: 25px;
+  background-color: lightskyblue;
+}
+
+.inputs:hover{
+  border: 2px solid yellow;
+}
+
+.inputs::-webkit-outer-spin-button,
+.inputs::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .angaben > .labels {
@@ -49,7 +70,18 @@
 }
 
 .buttons {
-  justify-self:  center;
   width: 100px;
   height: 25px;
+  border-radius: 5px;
+  background-color: lightskyblue;
+}
+
+.buttons:hover {
+  background: yellow;
+}
+
+.button-div {
+  justify-self: center;
+  margin-top: 25px;
+  display: grid;
 }

@@ -29,7 +29,7 @@ function App() {
     } else if (vs < vw) {
       setMessage({text: "WARNUNG: Sie sind unterversichert!", color: "red", show: true})
     } else {
-      setMessage({text: "Sie haben sich gut versichert", color: "green", show: true})
+      setMessage({text: "Sie haben sich gut versichert", color: "blue", show: true})
     }
   }
   else {
