@@ -47,64 +47,67 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Schadensrechner/Home About Me</h1>
-      <div className="ClientAngaben">
-        
-        <label for="Versicherungssumme">
-          Bitte geben Sie Ihre Versicherungssumme an:
-        </label>
-        <input
-          type="number"
-          id="Versicherungssumme"
-          name="Versicherungssumme"
-          min="1"
-          max="100000000"
-          value={vs}
-          onChange={(e) => setVS(e.target.value)}
-        />
+      <h1>Schadensrechner/Home</h1>
 
-        <label for="Versicherungswert">
-          Bitte geben Sie Ihren Versicherungswert an:
-        </label>
-        <input
-          type="number"
-          id="Versicherungswert"
-          name="Versicherungswert"
-          min="1"
-          max="100000000"
-          value={vw}
-          onChange={(e) => setVW(e.target.value)}
-        />
-
-        <label for="Schaden">
-          Bitte geben Sie den angerichteten Schaden an:
-        </label>
-        <input
-          type="number"
-          id="Schaden"
-          name="Schaden"
-          min="1"
-          max="100000000"
-          value={schaden}
-          onChange={(e) => setSchaden(e.target.value)}
-        />
+      <div className="App-Header">
+        <div className="angaben-container">
+          <div className="angaben">
+            <label className="labels" for="Versicherungssumme">
+              Bitte geben Sie Ihre Versicherungssumme an:
+            </label>
+            <input
+              type="number"
+              id="Versicherungssumme"
+              className="inputs"
+              min="1"
+              max="100000000"
+              value={vs}
+              onChange={(e) => setVS(e.target.value)}
+            />
+            <br />
+            <label className="labels" for="Versicherungswert">
+              Bitte geben Sie Ihren Versicherungswert an:
+            </label>
+            <input
+              type="number"
+              id="Versicherungswert"
+              className="inputs"
+              min="1"
+              max="100000000"
+              value={vw}
+              onChange={(e) => setVW(e.target.value)}
+            />
+            <br />
+            <label className="labels" for="Schaden">
+              Bitte geben Sie den angerichteten Schaden an:
+            </label>
+            <input
+              type="number"
+              id="Schaden"
+              className="inputs"
+              min="1"
+              max="100000000"
+              value={schaden}
+              onChange={(e) => setSchaden(e.target.value)}
+            />
+          </div>
+          <button className="buttons" onClick={berechnen}>
+            Berechnen
+          </button>
+          <button className="buttons" onClick={reset}>
+            Reset
+          </button>
+        </div>
+        <div className="ergebnis">
+          <p>{result}</p>
+          { message.show ? (
+              <p style={{color: message.color}}>
+                {message.text}
+              </p>
+          ): ""}
+        </div>
+        <p></p>
       </div>
-      <div className="Ergebnis">
-        <button id="Berechnen" onClick={berechnen}>
-          Berechnen
-        </button>
-        <p>{result}</p>
-        
-        { message.show ? (
-            <p style={{color: message.color}}>
-              {message.text}
-            </p>
-        ): ""}
-        <button id="reset" onClick={reset}>
-          Reset
-        </button>
-      </div>
-      <p></p>
     </div>
   );
 }
