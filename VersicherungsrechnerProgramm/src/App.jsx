@@ -91,12 +91,14 @@ function App() {
               onChange={(e) => setSchaden(e.target.value)}
             />
           </div>
-          <button className="buttons" onClick={berechnen}>
-            Berechnen
-          </button>
-          <button className="buttons" onClick={reset}>
-            Reset
-          </button>
+          <div className="button-div">
+            <button className="buttons" onClick={berechnen}>
+              Berechnen
+            </button>
+            <button className="buttons" onClick={reset}>
+              Reset
+            </button>
+          </div>
         </div>
         <div className="ergebnis">
           <p>{result}</p>
