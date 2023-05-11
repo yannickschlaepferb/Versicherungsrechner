@@ -8,6 +8,8 @@
 }
 
 h1 {
+  font-size: 50pt;
+  color:rgb(41, 113, 196);
   margin: 0px;  
   padding-top: 30px;
 }
@@ -22,7 +24,7 @@ h1 {
   background-color: rgba(253, 105, 0, 0.512);
   backdrop-filter: blur(5px);
   border-radius: 20px;
-  border: 2px solid rgba(253, 105, 0, 1);;
+  border: 2px solid rgba(253, 105, 0, 1);
   margin: 35px;
   text-align: left;
   display: grid;
@@ -34,6 +36,10 @@ h1 {
 .angaben{
   grid-row: 1/2;
   display: grid;
+  border: 2px solid rgba(253, 105, 0, 1);
+  border-radius: 20px;
+  padding: 10px;
+  backdrop-filter: blur(15px);
 }
 
 .ergebnis {
@@ -53,9 +59,15 @@ h1 {
   max-width: 150px;
   max-height: 25px;
   background-color: lightsteelblue;
+  border: 2px solid rgb(41, 113, 196);
 }
 
 .inputs:hover{
+  border: 2px solid yellow;
+}
+
+.inputs:focus-within {
+  outline: none;
   border: 2px solid yellow;
 }
 
@@ -67,6 +79,8 @@ h1 {
 
 .angaben > .labels {
   grid-column: 1/2;
+  color: rgba(41, 113, 196);
+  text-shadow: 0.25px 0.25px 0.25px white;
 }
 
 .buttons {
@@ -74,7 +88,10 @@ h1 {
   height: 40px;
   border-radius: 5px;
   background-color: lightsteelblue;
-  font-size: large;
+  font-size: 18pt;
+  color: rgb(41, 113, 196);
+  text-shadow: 0.5px 0.5px 0.5px black ;
+  border: 2px solid rgb(41, 113, 196);
 }
 
 .buttons:hover {
@@ -82,7 +99,16 @@ h1 {
 }
 
 .button-div {
+  grid-row: 2/3;
+  align-items: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   justify-self: center;
-  margin-top: 25px;
-  display: grid;
+  gap: 10px;
+  border: 2px solid rgba(253, 105, 0, 1);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  width: 95%;
 }

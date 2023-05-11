@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
 
@@ -47,7 +46,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Schadensrechner/Home</h1>
+      <h1>Schadensrechner</h1>
 
       <div className="App-Header">
         <div className="angaben-container">
