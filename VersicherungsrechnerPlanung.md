@@ -39,12 +39,13 @@ Ich informiere regelmässig über meine Tätigkeiten.
 
 #### erledigt
 
-* [ ] <letzte CSS verschönerungen>
-* [ ] <Strukturänderungen>
-* [ ] <Dockerfile>
+* [ ] <zweite Idee hinzugefügen>
 
 
 ---
 
 ## Liste der zuvor abgeschlossenen Arbeiten
--
+
+* [ ] <letzte CSS verschönerungen>
+* [ ] <Strukturänderungen>
+* [ ] <Dockerfile>
