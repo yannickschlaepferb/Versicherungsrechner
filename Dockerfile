@@ -1,12 +1,17 @@
-FROM node:18-bullseye as files
-WORKDIR /app
-RUN git clone https://github.com/yannickschlaepferb/Versicherungsrechner.git .
-WORKDIR /app
-RUN npm ci
-RUN npm run build
+FROM node:14.18.0-bullseye-slim
 
-FROM node:18-bullseye
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y git
+
 WORKDIR /app
-COPY --from=files /app .
+
+RUN git clone https://github.com/yannickschlaepferb/Versicherungsrechner.git .
+
+WORKDIR /app/VersicherungsrechnerProgramm
+
+RUN npm ci
+
 EXPOSE 3000
-ENTRYPOINT [ "npm", "run", "start" ]
+
+ENTRYPOINT [ "npm", "start" ]
