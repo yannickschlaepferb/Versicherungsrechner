@@ -24,7 +24,7 @@ function App() {
       }
     });
     if (vs > vw) {
-      setMessage({text: "WARNUNG: Sie sind überversichert!", color: "red", show: true})
+      setMessage({text: "WARNUNG: Sie sind überversichert!", color: "red", show: true,})
     } else if (vs < vw) {
       setMessage({text: "WARNUNG: Sie sind unterversichert!", color: "red", show: true})
     } else {

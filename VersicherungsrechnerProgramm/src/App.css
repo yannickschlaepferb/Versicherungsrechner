@@ -21,10 +21,10 @@ h1 {
 }
 
 .angaben-container {
-  background-color: rgba(253, 105, 0, 0.512);
+  background-color: rgba(244, 240, 236, 0.512);
   backdrop-filter: blur(5px);
   border-radius: 20px;
-  border: 2px solid rgba(253, 105, 0, 1);
+  border: 2px solid rgba(244, 240, 236, 0.512);
   margin: 35px;
   text-align: left;
   display: grid;
@@ -36,21 +36,23 @@ h1 {
 .angaben{
   grid-row: 1/2;
   display: grid;
-  border: 2px solid rgba(253, 105, 0, 1);
+  border: 2px solid rgba(244, 240, 236, 0.512);
   border-radius: 20px;
   padding: 10px;
   backdrop-filter: blur(15px);
+  margin-bottom: 0.5cm;
 }
 
 .ergebnis {
-  background-color: rgba(253, 105, 0, 0.512);
+  background-color: rgba(244, 240, 236, 0.512);
   backdrop-filter: blur(5px);
   border-radius: 20px;
-  border: 2px solid rgba(253, 105, 0, 1);
+  border: 2px solid rgba(244, 240, 236, 0.512);
   padding-bottom: 35px;
   margin: 100px;
   padding: 10%;
   text-shadow: 0.5px 0.5px 0.5px black;
+  font-size: large;
 }
 
 .angaben > .inputs {
@@ -107,7 +109,7 @@ h1 {
   justify-content: center;
   justify-self: center;
   gap: 10px;
-  border: 2px solid rgba(253, 105, 0, 1);
+  border: 2px solid rgba(244, 240, 236, 0.512);
   border-radius: 20px;
   backdrop-filter: blur(15px);
   width: 95%;
