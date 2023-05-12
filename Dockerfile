@@ -1,6 +1,6 @@
 FROM node:18-bullseye as files
 WORKDIR VersicherungsrechnerProgramm
-RUN git clone https://github.com/yannickschlaepferb/Versicherungsrechner/tree/main/VersicherungsrechnerProgramm .
+RUN git clone https://github.com/yannickschlaepferb/Versicherungsrechner.git .
 WORKDIR /VersicherungsrechnerProgramm
 RUN npm ci
 RUN npm run build
