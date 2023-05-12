@@ -1,12 +1,12 @@
 FROM node:18-bullseye as files
-WORKDIR /VersicherungsrechnerProgramm
+WORKDIR /app
 RUN git clone https://github.com/yannickschlaepferb/Versicherungsrechner.git .
-WORKDIR /VersicherungsrechnerProgramm
+WORKDIR /app
 RUN npm ci
 RUN npm run build
 
 FROM node:18-bullseye
-WORKDIR /VersicherungsrechnerProgramm
-COPY --from=files /VersicherungsrechnerProgramm .
+WORKDIR /app
+COPY --from=files /app .
 EXPOSE 3000
 ENTRYPOINT [ "npm", "run", "start" ]
